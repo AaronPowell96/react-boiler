@@ -17,7 +17,7 @@
     "lint:watch": "npm run lint -- --watch",
     "clean-dist": "npm run remove-dist && mkdir dist",
     "remove-dist": "rimraf ./dist",
-    "prebuild": "npm run lint && npm run test && npm run clean-dist",
+    "prebuild": "npm run lint && npm run clean-dist",
     "build": "babel-node tools/build.js && npm run open:dist",
     "test": "jest",
     "test:CI": "jest",
@@ -31,11 +31,14 @@
   "license": "MIT",
   "dependencies": {
     "@hot-loader/react-dom": "16.10.2",
-    "connected-react-router": "6.5.2",
     "object-assign": "4.1.1",
     "react": "16.11.0",
+    "react-cool-img": "1.2.0",
     "react-dom": "16.11.0",
-    "react-router-dom": "5.1.2"
+    "react-focus-on": "3.4.1",
+    "react-helmet": "6.1.0",
+    "react-router-dom": "5.1.2",
+    "react-transition-group": "4.4.1"
   },
   "devDependencies": {
     "@babel/cli": "7.6.4",

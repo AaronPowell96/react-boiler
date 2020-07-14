@@ -1,0 +1,19 @@
+.coreLayout {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: 60px min-content 60px;
+
+  > main.container {
+    grid-column: 1/-1;
+    padding-top: 30px;
+    min-height: calc(100vh - (60px + 60px + 30px));
+  }
+  > .footer {
+    grid-column: 1/-1;
+  }
+}
+.coreLayout > * {
+  // border: solid red 2px;
+  background-color: #03a9f4;
+}

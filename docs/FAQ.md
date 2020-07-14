@@ -48,13 +48,7 @@
 
 ---
 
-## Why does this exist?
-
-This starter kit implements best practices like testing, minification, bundling, and so on. It codifies a long list of decisions that you no longer have to make to get rolling. It saves you from the long, painful process of wiring it all together into an automated dev environment and build process. It's also useful as inspiration for ideas you might want to integrate into your current development environment or build process.
-
 ## What do the scripts in package.json do?
-
-Unfortunately, scripts in package.json can't be commented inline because the JSON spec doesn't support comments, so I'm providing info on what each script in package.json does here.
 
 | **Script**        | **Description**                                                                                                                                            |
 | ----------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -231,9 +225,9 @@ Nope. Redux is useful for applications with more complex data flows. If your app
 
 `npm run build`. This will build the project for production. It does the following:
 
-* Minifies all JS
-* Sets NODE_ENV to prod so that React is built in production mode
-* Places the resulting built project files into /dist. (This is the folder you'll expose to the world).
+- Minifies all JS
+- Sets NODE_ENV to prod so that React is built in production mode
+- Places the resulting built project files into /dist. (This is the folder you'll expose to the world).
 
 If the app destination is different from the server root (`/`) you need to reconfigure `output.publicPath` in `webpack.config.prod.js` before building the app. See [webpack docs](https://webpack.js.org/configuration/output/#output-publicpath) for more information.
 
@@ -243,11 +237,11 @@ Check out this [blog post](http://www.latrovacommits.com/en/2017/12/14/how-publi
 
 Streamlined automated testing is a core feature of this starter kit. All tests are placed in files that end in .spec.js. Spec files are placed in the same directory as the file under test. Why?
 
-* The existence of tests is highly visible. If a corresponding .spec file hasn't been created, it's obvious.
-* Easy to open since they're in the same folder as the file being tested.
-* Easy to create new test files when creating new source files.
-* Short import paths are easy to type and less brittle.
-* As files are moved, it's easy to move tests alongside.
+- The existence of tests is highly visible. If a corresponding .spec file hasn't been created, it's obvious.
+- Easy to open since they're in the same folder as the file being tested.
+- Easy to create new test files when creating new source files.
+- Short import paths are easy to type and less brittle.
+- As files are moved, it's easy to move tests alongside.
 
 That said, you can of course place your tests under **test** instead. Then Jest will simply look in /test to find your spec files.
 
@@ -266,12 +260,13 @@ Also note that no actual physical files are written to the filesystem during the
 
 ## Debugging in Visual Studio Code:
 
-* Install the [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) extension.
-* Follow the instructions on how to [configure debugging in Visual Studio code](https://github.com/Microsoft/vscode-chrome-debug/blob/master/README.md#using-the-debugger).
-* You can also add the following to `.vscode/launch.json` file to open the Chrome browser automatically and apply sourcemaps.
-* Start the application, then click the green play icon in Visual Studio Code to start debugging.
+- Install the [Debugger for Chrome](https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome) extension.
+- Follow the instructions on how to [configure debugging in Visual Studio code](https://github.com/Microsoft/vscode-chrome-debug/blob/master/README.md#using-the-debugger).
+- You can also add the following to `.vscode/launch.json` file to open the Chrome browser automatically and apply sourcemaps.
+- Start the application, then click the green play icon in Visual Studio Code to start debugging.
 
 **example launch.json**
+
 ```json
 {
   "version": "0.2.0",
